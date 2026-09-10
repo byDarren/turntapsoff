@@ -1,7 +1,7 @@
 # turnthetapsoff.com — local copy with Apple-design review fixes
 
 A self-contained static copy of https://turnthetapsoff.com (originally a Next.js
-app) with the changes from the Apple-design review applied.
+app).
 
 ## Run it
 
