@@ -1,0 +1,180 @@
+/* ==========================================================================
+   turnthetapsoff.com — local copy: Apple-design review fixes
+   Loaded AFTER tailwind.css. Everything is scoped to .tto-local so the
+   original compiled utilities are never touched.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   FIX 4 — motion story: smooth in-page scroll, gated for reduced motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+/* keep anchored sections clear of the sticky header when jumped to */
+.tto-local :where(#impact, #help, #contact) { scroll-margin-top: 84px; }
+
+/* --------------------------------------------------------------------------
+   FIX 6 — sticky translucent header + wayfinding nav (§7, §12, §16)
+   Transparent while over the green hero; materialises into a blurred
+   layer once scrolled past it (data-scrolled toggled by enhance.js).
+   -------------------------------------------------------------------------- */
+.tto-local .tto-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  /* reads as a continuation of the green hero band until scrolled */
+  background: rgb(18 242 74);
+  transition: background-color 240ms ease, backdrop-filter 240ms ease, box-shadow 240ms ease;
+}
+.tto-local .tto-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+@media (min-width: 768px) {
+  .tto-local .tto-header__inner { padding-top: 1rem; padding-bottom: 1rem; }
+}
+.tto-local .tto-header__mark {
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  outline-offset: 4px;
+}
+.tto-local .tto-header[data-scrolled] {
+  background: rgba(255, 255, 255, 0.72);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 1px 0 rgba(23, 23, 23, 0.08);
+}
+
+.tto-local .tto-nav {
+  display: flex;
+  gap: clamp(0.75rem, 3vw, 2rem);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.tto-local .tto-nav a {
+  color: #171717;
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 160ms ease, opacity 160ms ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tto-local .tto-nav a:hover { border-bottom-color: #171717; }
+}
+.tto-local .tto-nav a:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+/* On small screens the wordmark alone is enough chrome. */
+@media (max-width: 560px) {
+  .tto-local .tto-nav { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   FIX 5 — CTA: WhatsApp icon + label alignment
+   FIX 3 — focus ring is context-aware (white on the dark button)
+   -------------------------------------------------------------------------- */
+.tto-local .tto-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tto-local .tto-cta__icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  flex: none;
+}
+.tto-local .tto-cta:focus-visible {
+  outline-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(23, 23, 23, 0.55); /* keeps the white ring visible on any ground */
+}
+
+/* --------------------------------------------------------------------------
+   FIX 2 — email link: real >=44px touch target (§10, WCAG 2.5.8)
+   -------------------------------------------------------------------------- */
+.tto-local .tto-email {
+  display: inline-block;
+  min-height: 44px;
+  padding: 12px 2px;
+  color: #404040;
+  text-underline-offset: 2px;
+}
+@media (hover: hover) and (pointer: fine) {
+  .tto-local .tto-email:hover { text-decoration: underline; }
+}
+.tto-local .tto-email:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   FIX 1 — heading ramp: the large section headings were font-normal with
+   no tracking. The class swap to font-semibold happens in the HTML; this
+   just guarantees the size-specific negative tracking Apple asks for (§15).
+   -------------------------------------------------------------------------- */
+.tto-local h2 { letter-spacing: -0.02em; }
+.tto-local h1 { letter-spacing: -0.025em; }
+
+/* --------------------------------------------------------------------------
+   FIX 4 — stat count-up: reserve width so the settle doesn't reflow the row
+   -------------------------------------------------------------------------- */
+.tto-local .tto-countup {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  min-width: 1.6ch;
+  text-align: right;
+}
+
+/* contact photo (replaces next/image fill) */
+.tto-local .tto-fill-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* --------------------------------------------------------------------------
+   FIX 4 — reduced motion: gentle, non-vestibular equivalent (§14)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .tto-local *,
+  .tto-local *::before,
+  .tto-local *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 60ms !important;
+    scroll-behavior: auto !important;
+  }
+  .tto-local .tto-countup { min-width: 0; } /* value is rendered statically, no tween */
+}
+
+/* --------------------------------------------------------------------------
+   §14 — reduced transparency: frost the header into a solid layer
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-transparency: reduce) {
+  .tto-local .tto-header[data-scrolled] {
+    background: #ffffff;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   §14 — high contrast: give the sticky header a defined edge
+   -------------------------------------------------------------------------- */
+@media (prefers-contrast: more) {
+  .tto-local .tto-header[data-scrolled] {
+    background: #ffffff;
+    border-bottom: 1px solid #171717;
+  }
+  .tto-local .tto-nav a { border-bottom-color: rgba(23, 23, 23, 0.35); }
+}
