@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="__variable_d0be19">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Turn the taps off | Paul Stevens</title>
+  <meta name="description" content="Product design leadership — stop mopping the floor and turn the taps off." />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" sizes="any" />
+  <link rel="preload" href="assets/media/e4af272ccee01ff0-s.p.woff2" as="font" crossorigin type="font/woff2" />
+  <link rel="preload" as="image" href="images/logos/keyloop.svg" />
+  <link rel="preload" as="image" href="images/logos/radius.svg" />
+  <link rel="preload" as="image" href="images/logos/carfinance247.svg" />
+  <link rel="preload" as="image" href="images/logos/autotrader.svg" />
+  <link rel="preload" as="image" href="images/logos/moneysupermarket.svg" />
+  <link rel="stylesheet" href="assets/tailwind.css" />
+  <link rel="stylesheet" href="assets/overrides.css" />
+  <script src="assets/enhance.js" defer></script>
+</head>
+<body class="font-sans antialiased tto-local">
+  <main>
+    <!-- FIX 6 (sticky translucent header) + wayfinding: reads as part of the green
+         hero band at the top, materialises into a blurred layer once scrolled
+         past it (data-scrolled, set by enhance.js). Lives outside the hero div
+         so it stays pinned for the whole page. -->
+    <header class="tto-header" data-tto-header>
+      <div class="tto-header__inner mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <a href="#top" class="tto-header__mark text-xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-2xl" aria-label="Turn the taps off — back to top">
+          <span class="block">taps</span><span class="block">off</span>
+        </a>
+        <nav class="tto-nav" aria-label="Sections">
+          <a href="#impact">Impact</a>
+          <a href="#help">How I help</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="bg-brand-green">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="top" class="pt-16 pb-12 md:pt-24 md:pb-16">
+          <!-- FIX 6: give the split headline a clean accessible name (spans have no whitespace between them) -->
+          <h1 class=" font-extrabold tracking-tight text-neutral-900 text-[44px] leading-[1.05] sm:text-[56px] md:text-[72px] lg:text-[84px] xl:text-[96px] "
+              aria-label="Stop mopping the floor. Turn the taps off.">
+            <span class="block">Stop mopping the floor.</span><span class="block">Turn the taps off.</span>
+          </h1>
+          <p class="mt-10 md:mt-14 max-w-3xl text-xl font-semibold leading-snug text-neutral-900 md:text-2xl">Product design leadership</p>
+          <p class="mt-4 md:mt-5 max-w-3xl text-lg leading-relaxed text-neutral-700 md:text-xl md:leading-[1.6]">I help organisations fix product problems, simplify complexity and get important work moving.</p>
+          <div class="mt-10 md:mt-12">
+            <!-- FIX 5: WhatsApp affordance (icon + label) + explicit aria-label.
+                 FIX 3: focus ring overridden to white for this dark button (see .tto-cta in overrides.css). -->
+            <a class="tto-cta inline-block px-8 py-3.5 text-base font-medium transition-[background-color,color,border-radius] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 duration-[220ms] ease-out rounded-none bg-neutral-900 text-white active:rounded-md active:bg-white active:text-neutral-900 [@media(hover:hover)_and_(pointer:fine)]:hover:rounded-md [@media(hover:hover)_and_(pointer:fine)]:hover:bg-white [@media(hover:hover)_and_(pointer:fine)]:hover:text-neutral-900"
+               href="https://wa.me/447857519362?text=Hi%20Paul%2C"
+               target="_blank" rel="noopener noreferrer"
+               aria-label="Message Paul on WhatsApp (opens in a new tab)">
+              <svg class="tto-cta__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.729-.755zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              <span>Talk to Paul</span>
+            </a>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 md:pt-20 lg:pt-24">
+      <section class="pb-16 md:pb-20">
+        <p class="mb-5 text-base text-neutral-600">I&#x27;ve helped</p>
+        <ul class="flex flex-wrap items-center gap-x-10 gap-y-8 md:flex-nowrap md:justify-between md:gap-x-8 lg:gap-x-10">
+          <li class="flex shrink-0 items-center"><img src="images/logos/keyloop.svg" alt="Keyloop" class="h-6 w-auto max-w-[96px] logo-greyscale-test" /></li>
+          <li class="flex shrink-0 items-center"><img src="images/logos/radius.svg" alt="Radius" class="h-6 w-auto max-w-[98px] logo-greyscale-test" /></li>
+          <li class="flex shrink-0 items-center"><img src="images/logos/carfinance247.svg" alt="CarFinance 247" class="h-8 w-auto max-w-[40px] logo-greyscale-test" /></li>
+          <li class="flex shrink-0 items-center"><img src="images/logos/autotrader.svg" alt="Auto Trader" class="h-5 w-auto max-w-[124px] logo-greyscale-test" /></li>
+          <li class="flex shrink-0 items-center"><img src="images/logos/moneysupermarket.svg" alt="MoneySuperMarket" class="h-5 w-auto max-w-[140px] logo-greyscale-test" /></li>
+        </ul>
+      </section>
+
+      <!-- FIX 6: id for wayfinding -->
+      <section id="impact" class="pb-16 md:pb-24" tabindex="-1">
+        <!-- FIX 1: was font-normal (anaemic at 42px) + no tracking -> match the 600-weight heading scale -->
+        <h2 class="text-[26px] sm:text-[32px] md:text-[42px] font-semibold tracking-tight leading-tight text-neutral-900 mb-10 md:mb-12">Measurable impact.</h2>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
+          <article class="flex min-h-[320px] flex-col border border-slate-200 bg-white rounded-3xl px-6 py-8 md:min-h-[420px] md:px-8 md:py-10">
+            <div>
+              <div class="flex items-baseline gap-0.5">
+                <!-- FIX 4: count-up on scroll into view (skipped under prefers-reduced-motion) -->
+                <span class="tto-countup text-[52px] font-semibold leading-none tracking-tight text-neutral-900 md:text-[72px] lg:text-[80px]" data-countup="27">27</span>
+                <span class="text-2xl font-semibold leading-none text-neutral-900 md:text-4xl">%</span>
+              </div>
+              <p class="mt-4 text-base leading-snug text-neutral-700 md:text-lg">reduction in support demand</p>
+            </div>
+            <div class="mt-auto pt-12 md:pt-16">
+              <p class="text-base leading-relaxed text-neutral-700 md:text-[18px] md:leading-[1.65]">Creating a shared product experience across a fragmented automotive software ecosystem, reducing complexity for 250,000+ users.</p>
+              <p class="mt-4 text-base text-neutral-600">Keyloop · Enterprise SaaS</p>
+            </div>
+          </article>
+          <article class="flex min-h-[320px] flex-col border border-slate-200 bg-white rounded-3xl px-6 py-8 md:min-h-[420px] md:px-8 md:py-10">
+            <div>
+              <div class="flex items-baseline gap-0.5">
+                <span class="tto-countup text-[52px] font-semibold leading-none tracking-tight text-neutral-900 md:text-[72px] lg:text-[80px]" data-countup="83">83</span>
+                <span class="text-2xl font-semibold leading-none text-neutral-900 md:text-4xl">%</span>
+              </div>
+              <p class="mt-4 text-base leading-snug text-neutral-700 md:text-lg">increase in cross-sell</p>
+            </div>
+            <div class="mt-auto pt-12 md:pt-16">
+              <p class="text-base leading-relaxed text-neutral-700 md:text-[18px] md:leading-[1.65]">Redesigning how customers discovered and bought additional products.</p>
+              <p class="mt-4 text-base text-neutral-600">Radius · Payments</p>
+            </div>
+          </article>
+          <article class="flex min-h-[320px] flex-col border border-slate-200 bg-white rounded-3xl px-6 py-8 md:min-h-[420px] md:px-8 md:py-10">
+            <div>
+              <div class="flex items-baseline gap-0.5">
+                <span class="tto-countup text-[52px] font-semibold leading-none tracking-tight text-neutral-900 md:text-[72px] lg:text-[80px]" data-countup="31">31</span>
+                <span class="text-2xl font-semibold leading-none text-neutral-900 md:text-4xl">%</span>
+              </div>
+              <p class="mt-4 text-base leading-snug text-neutral-700 md:text-lg">increase in conversion</p>
+            </div>
+            <div class="mt-auto pt-12 md:pt-16">
+              <p class="text-base leading-relaxed text-neutral-700 md:text-[18px] md:leading-[1.65]">Redesigning the end-to-end UX and UI using research, testing and behavioural data to remove friction and increase conversion.</p>
+              <p class="mt-4 text-base text-neutral-600">CarFinance 247 · Financial services</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- FIX 6: even out vertical rhythm (was py-16 md:py-20) to match the py-20 md:py-32 sections below -->
+      <section class="w-full py-20 md:py-32">
+        <div class="bg-gray-50 rounded-3xl px-16 py-16">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-16">
+            <div class="max-w-[520px] xl:max-w-[560px]">
+              <!-- FIX 1 -->
+              <h2 class="text-[26px] sm:text-[32px] md:text-[42px] font-semibold tracking-tight leading-tight text-neutral-900">A lot of businesses are too busy mopping the floor to turn the taps off</h2>
+              <p class="text-base font-bold text-neutral-900 mt-6">I help turn the taps off</p>
+            </div>
+            <div class="flex-shrink-0">
+              <div class="relative w-full max-w-[360px] aspect-[9/16] rounded-3xl overflow-hidden bg-gray-100">
+                <video src="videos/mopping-the-floor.mp4" poster="images/mopping-the-floor-poster.jpg" playsinline controls preload="metadata" class="h-full w-full object-cover"></video>
+                <!-- FIX 6: decorative overlay marked aria-hidden (video already exposes native controls) -->
+                <div class="tto-play absolute inset-0 flex items-center justify-center bg-black/20 cursor-pointer" aria-hidden="true">
+                  <div class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center">
+                    <svg class="w-6 h-6 text-neutral-900 ml-1" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 5v14l11-7z"></path></svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="help" class="py-20 md:py-32" tabindex="-1">
+        <!-- FIX 1 -->
+        <h2 class="text-[26px] sm:text-[32px] md:text-[42px] font-semibold tracking-tight leading-tight text-neutral-900">How I can help</h2>
+        <p class="mt-10 md:mt-12 max-w-4xl text-[26px] font-semibold leading-tight tracking-tight text-neutral-900 sm:text-[32px] md:text-[42px] md:leading-[1.15]">A design partner across product and engineering, cutting through the mess, finding the right direction and getting exceptional products delivered.</p>
+        <div class="mt-16 grid grid-cols-1 gap-12 md:mt-24 md:grid-cols-3 md:gap-8 lg:gap-12">
+          <div>
+            <h3 class="text-lg font-bold text-neutral-900 md:text-xl">Product direction</h3>
+            <p class="mt-4 text-base leading-relaxed text-neutral-700 md:text-[18px] md:leading-[1.65]">Using discovery, customer feedback and UX testing to understand what&#x27;s really needed, define the right direction and get teams aligned around what to build and why.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-neutral-900 md:text-xl">Design capability</h3>
+            <p class="mt-4 text-base leading-relaxed text-neutral-700 md:text-[18px] md:leading-[1.65]">Build design into the way product and engineering teams work, whether it&#x27;s missing entirely or simply not working well enough.</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold text-neutral-900 md:text-xl">Complex product problems</h3>
+            <p class="mt-4 text-base leading-relaxed text-neutral-700 md:text-[18px] md:leading-[1.65]">Solve complex product problems by working directly with product and engineering teams to untangle what&#x27;s getting in the way and deliver exceptional products faster.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 md:py-32">
+        <div class="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16 lg:gap-24">
+          <!-- FIX 6: accessible name for the split heading -->
+          <h2 class=" font-semibold tracking-tight text-neutral-900 text-[32px] leading-[1.1] sm:text-[40px] md:text-[48px] lg:text-[56px] " aria-label="Outcome first. Empowered by AI.">
+            <span class="block">Outcome first.</span><span class="block">Empowered by AI.</span>
+          </h2>
+          <p class="max-w-xl text-base leading-relaxed text-neutral-700 md:pt-2 md:text-[18px] md:leading-[1.65] lg:max-w-lg">I use AI across research, design and prototyping to get from problem to tested direction faster. The judgement, customer need and business outcome still come first.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 md:py-32" tabindex="-1">
+        <div class="grid grid-cols-1 items-start gap-12 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] md:gap-16 lg:gap-24">
+          <div class="relative aspect-[4/5] w-full max-w-md md:max-w-none">
+            <img src="images/contact-me-image.png" alt="Paul Stevens speaking at a conference" loading="lazy" decoding="async" class="tto-fill-img" />
+          </div>
+          <div class="md:pt-4">
+            <h2 class="max-w-xl text-[26px] font-semibold leading-tight tracking-tight text-neutral-900 sm:text-[32px] md:text-[42px] md:leading-[1.15]">Got a product problem worth fixing?</h2>
+            <p class="mt-8 max-w-xl text-base leading-relaxed text-neutral-700 md:text-[18px] md:leading-[1.65]">If it&#x27;s getting messy, the product has become too complicated or important work isn&#x27;t moving, we should talk.</p>
+            <div class="mt-10 md:mt-12">
+              <!-- FIX 5 + FIX 3 -->
+              <a class="tto-cta inline-block px-8 py-3.5 text-base font-medium transition-[background-color,color,border-radius] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 duration-[220ms] ease-out rounded-none bg-neutral-900 text-white active:rounded-md active:bg-brand-green active:text-neutral-900 [@media(hover:hover)_and_(pointer:fine)]:hover:rounded-md [@media(hover:hover)_and_(pointer:fine)]:hover:bg-brand-green [@media(hover:hover)_and_(pointer:fine)]:hover:text-neutral-900"
+                 href="https://wa.me/447857519362?text=Hi%20Paul%2C"
+                 target="_blank" rel="noopener noreferrer"
+                 aria-label="Message Paul on WhatsApp (opens in a new tab)">
+                <svg class="tto-cta__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.729-.755zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.767.967-.94 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                <span>Talk to Paul</span>
+              </a>
+              <!-- FIX 2: give the email link a >=44px tap target -->
+              <p class="mt-4 text-sm text-neutral-600">Prefer email? <a class="tto-email" href="mailto:paul@turnthetapsoff.com?subject=Turn%20the%20taps%20off%20enquiry">paul@turnthetapsoff.com</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="bg-brand-green py-20 md:py-32 lg:py-40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <p class=" max-w-5xl font-semibold tracking-tight text-neutral-900 text-[28px] leading-[1.12] sm:text-[36px] md:text-[48px] lg:text-[56px] ">Transformation without a focus on experience delivers poor experiences faster.</p>
+        <div class="mt-16 text-base font-semibold leading-tight tracking-tight text-neutral-900 md:mt-24 lg:mt-32" aria-label="Turn the taps off">
+          <span class="block">taps</span><span class="block">off</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="taps off">
+  <rect width="32" height="32" fill="#12F24A" />
+  <text
+    x="16"
+    y="12"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="7"
+    font-weight="700"
+    fill="#171717"
+  >
+    taps
+  </text>
+  <text
+    x="16"
+    y="22"
+    text-anchor="middle"
+    font-family="system-ui, -apple-system, 'Segoe UI', sans-serif"
+    font-size="7"
+    font-weight="700"
+    fill="#171717"
+  >
+    off
+  </text>
+</svg>
